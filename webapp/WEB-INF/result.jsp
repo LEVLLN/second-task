@@ -5,6 +5,6 @@
     <title></title>
 </head>
 <body>
-${text}
+<p>${text}</p>
 </body>
 </html>

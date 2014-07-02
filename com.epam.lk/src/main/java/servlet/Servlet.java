@@ -7,6 +7,7 @@ public class Servlet extends javax.servlet.http.HttpServlet {
         request.setCharacterEncoding("UTF-8");
         String text = request.getParameter("text");
         request.setAttribute("text",text);
+
         request.getRequestDispatcher("/WEB-INF/result.jsp").forward(request, response);
 
     }
