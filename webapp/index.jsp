@@ -8,8 +8,8 @@
     <body>
     <div>
         <form action="${pageContext.request.contextPath}/Controller" method="post">
-         <textarea name="text">
-            </textarea>
+           <p><fmt:message key="enter.text"/> </p>
+         <textarea name="text" rows ="20" colums="100" autofocus></textarea>
 
             <p><input type="submit" value="<fmt:message key="submit" />"/></p>
         </form>
