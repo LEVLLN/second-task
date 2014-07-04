@@ -6,7 +6,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Parser {
-    public static List<Text> parseLetters(String submittedText) {
+    public static List<Text> parseText(String submittedText) {
         List<Text> letters = new ArrayList<>();
         String textStr = clean(submittedText);
         Pattern p = Pattern.compile("[а-яА-ЯёЁa-zA-Z]");
