@@ -10,10 +10,8 @@ public class ParseAction implements Action{
     @Override
     public String execute(HttpServletRequest request) {
         String text = request.getParameter("text");
-        Pattern pattern = Pattern.compile("\\.");
-        Matcher matcher = pattern.matcher(text);
 
-        request.setAttribute("text",matcher.group(text));
+              request.setAttribute("text",text);
         return "/WEB-INF/result.jsp";
     }
 }
