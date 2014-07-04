@@ -9,7 +9,7 @@
     <div>
         <form action="${pageContext.request.contextPath}/Controller" method="post">
            <p><fmt:message key="enter.text"/> </p>
-         <textarea name="text" rows ="20" colums="100" autofocus></textarea>
+         <textarea name="text" rows ="20" colums="3000" autofocus></textarea>
 
             <p><input type="submit" value="<fmt:message key="submit" />"/></p>
         </form>
