@@ -6,21 +6,21 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Text {
+    String stringText;
+    List<Paragraph> paragraphs;
 
-    List<Paragraph> text = new ArrayList<Paragraph>();
-
-
-    public List<Paragraph> getText() {
-        return text;
+    public Text(String stringText) {
+        paragraphs = new ArrayList<>();
+        this.stringText = stringText;
+        paragraphs.addAll(Parser.parseParagraphs(stringText));
     }
 
-    public void setText(List<Paragraph> text) {
-        this.text = text;
+    @Override
+    public String toString() {
+        return paragraphs.toString();
     }
 
-    public Text(String text) {
-
-        this.text = text;
+    public void addParagraph(Paragraph paragraph) {
+        paragraphs.add(paragraph);
     }
-
 }

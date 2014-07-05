@@ -15,8 +15,7 @@ public class Paragraph {
         this.paragraph = paragraph;
     }
 
-    public Paragraph(List<Sentence> paragraph) {
+    public Paragraph(String paragraph) {
 
-        this.paragraph = paragraph;
-    }
+       }
 }

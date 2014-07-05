@@ -6,21 +6,30 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Parser {
-    public static List<Text> parseText(String submittedText) {
-        List<Text> letters = new ArrayList<>();
-        String textStr = clean(submittedText);
-        Pattern p = Pattern.compile("[а-яА-ЯёЁa-zA-Z]");
-        Matcher m = p.matcher(textStr);
-        while (m.find()) {
-            String[] group = m.group().split("\\s");
-            for (String line : group) {
-                letters.add(new Text(line));
-            }
+    public static Text parseText(String subText) {
+        String textStr = clean(subText);
+        Text text = new Text(textStr);
+        return text;
+    }
+
+    public static List<Paragraph> parseParagraphs(String submittedText) {
+        String textStr = safe(submittedText);
+        String lines[] = textStr.split("\\n+");
+        List<Paragraph> pars = new ArrayList<>();
+        for (String line : lines) {
+            pars.add(new Paragraph(line));
         }
-        return letters;
+        return pars;
     }
     public static String clean(String textStr) {
         textStr = textStr.replaceAll("<|>|\\t|\\s+", " ");
         return textStr;
     }
+
+    public static String safe(String textStr) {
+        textStr = textStr.replaceAll("<|>", " ");
+        return textStr;
+    }
+
+
 }
