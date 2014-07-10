@@ -3,7 +3,7 @@
 <fmt:bundle basename="i18n.messages" prefix="index.">
     <html>
     <head>
-        <title></title>
+        <title><fmt:message key = "enter.text"/></title>
     </head>
     <body>
     <div>

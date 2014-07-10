@@ -13,8 +13,10 @@ public class ParseAction implements Action{
     @Override
     public String execute(HttpServletRequest request) {
        String text = request.getParameter("text");
-      Text stringText = Parser.parseText(text);
-       request.setAttribute("text",stringText);
+
+        Text result = (Text) Parser.parseParagraphs(text);
+
+       request.setAttribute("text", result);
         return "/WEB-INF/result.jsp";
     }
 }
