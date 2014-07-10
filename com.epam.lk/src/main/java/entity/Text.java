@@ -1,26 +1,30 @@
 package entity;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class Text {
-    String stringText;
-    List<Paragraph> paragraphs;
-
-    public Text(String stringText) {
-        paragraphs = new ArrayList<>();
+    public Text(String stringText, List<Paragraph> paragraphs) {
         this.stringText = stringText;
-        paragraphs.addAll(Parser.parseParagraphs(stringText));
+        this.paragraphs = paragraphs;
     }
 
-    @Override
-    public String toString() {
-        return paragraphs.toString();
+
+    private String stringText;
+    private List<Paragraph> paragraphs;
+
+    public String getStringText() {
+        return stringText;
     }
 
-    public void addParagraph(Paragraph paragraph) {
-        paragraphs.add(paragraph);
+    public void setStringText(String stringText) {
+        this.stringText = stringText;
+    }
+
+    public List<Paragraph> getParagraphs() {
+        return paragraphs;
+    }
+
+    public void setParagraphs(List<Paragraph> paragraphs) {
+        this.paragraphs = paragraphs;
     }
 }
