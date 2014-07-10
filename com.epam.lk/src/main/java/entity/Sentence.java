@@ -6,6 +6,10 @@ import java.util.List;
 public class Sentence {
     List<Word> sentence = new ArrayList<Word>();
 
+    public Sentence(String line) {
+
+    }
+
     public List<Word> getSentence() {
         return sentence;
     }

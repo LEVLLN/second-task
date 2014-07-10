@@ -6,6 +6,10 @@ import java.util.List;
 public class Word {
 List<Symbol> word = new ArrayList<Symbol>();
 
+    public Word(String line) {
+
+    }
+
     public List<Symbol> getWord() {
         return word;
     }

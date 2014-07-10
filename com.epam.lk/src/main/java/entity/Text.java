@@ -1,5 +1,6 @@
 package entity;
 
+import java.util.Collection;
 import java.util.List;
 
 public class Text {
@@ -11,6 +12,18 @@ public class Text {
 
     private String stringText;
     private List<Paragraph> paragraphs;
+
+    public Text(String string) {
+
+    }
+
+    @Override
+    public String toString() {
+        return "Text{" +
+                "stringText='" + stringText + '\'' +
+                ", paragraphs=" + paragraphs +
+                '}';
+    }
 
     public String getStringText() {
         return stringText;
@@ -26,5 +39,9 @@ public class Text {
 
     public void setParagraphs(List<Paragraph> paragraphs) {
         this.paragraphs = paragraphs;
+    }
+
+    public Collection<Object> Components() {
+        return null;
     }
 }
