@@ -8,8 +8,10 @@
 <body>
 <p><fmt:message key="your.text"/> </p>
 <p>${text}</p>
+<p>${paragraph}</p>
 <form action="${pageContext.request.contextPath}/" method="get">
-<p><input type="submit" value="<fmt:message key="back" />"/></p>
+    <p><input type="submit" value="<fmt:message key="back" />"/></p>
+</form>
 </body>
 </html>
 </fmt:bundle>
