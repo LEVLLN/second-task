@@ -7,6 +7,7 @@ public class ActionFactory {
 
     private static  final Map<String,Action> actions = new HashMap<>();{
         actions.put("parse",new ParseAction());
+
     }
 
     public static Action getAction(String actionName){

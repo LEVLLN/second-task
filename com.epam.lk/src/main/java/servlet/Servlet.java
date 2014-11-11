@@ -9,7 +9,8 @@ public class Servlet extends javax.servlet.http.HttpServlet {
     protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         Action action = new ParseAction();
-        String result = action.execute(request);
+        String result = null;
+        result = action.execute(request);
         request.getRequestDispatcher(result).forward(request, response);
     }
 

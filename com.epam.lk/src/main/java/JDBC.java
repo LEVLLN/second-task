@@ -11,6 +11,39 @@ public class JDBC {
     public void doConnect() throws SQLException {
         connection = DriverManager.getConnection(url, user, password);
         statement = connection.createStatement();
+
+
+    }
+
+    public void dropTable() throws SQLException {
+        statement.executeUpdate("DROP TABLE Joke");
+        statement.close();
+    }
+
+    public void createTable() throws SQLException {
+        statement.executeUpdate("CREATE Table Joke(lol smallint )");
+        statement.close();
+    }
+
+    public void insertTableEmployee() throws SQLException {
+        String insItem = "INSERT INTO EMPLOYEE (EMPLOYEE_ID,EMPLOYEE_NAME) \n VALUES (67,'uu')";
+        statement.executeUpdate(insItem);
+        resultSet = statement.executeQuery("SELECT * FROM EMPLOYEE");
+        while (resultSet.next()) {
+            System.out.println("Item: " + resultSet.getString("employee_name"));
+
+        }
+        resultSet.close();
+    }
+
+    public void connectionClose() throws SQLException {
+        connection.close();
+    }
+
+
+}
+
+
 //
 //           String dropTable = "DROP TABLE todoList";
 //            statement.executeUpdate(dropTable);
@@ -24,24 +57,3 @@ public class JDBC {
 //            System.out.println("Item: " + resultSet.getString("employee_name"));
 //        }
 //        resultSet.close();
-
-
-    }
-
-    public void dropTable() throws SQLException {
-        statement.executeUpdate("DROP TABLE Joke");
-        statement.close();
-    }
-    public void createTable() throws SQLException {
-        statement.executeUpdate("CREATE Table Joke(lol smallint )");
-        statement.close();
-    }
-    public void connectionClose() throws SQLException {
-        connection.close();
-    }
-
-
-
-}
-
-
