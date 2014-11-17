@@ -7,7 +7,7 @@
 
     <servlet>
         <servlet-name>Servlet</servlet-name>
-        <servlet-class>servlet.Servlet</servlet-class>
+        <servlet-class>com.epam.lk.servlet.Servlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Servlet</servlet-name>
